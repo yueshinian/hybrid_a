@@ -1,0 +1,8 @@
+<launch>
+ <!-- Turn on hybrid_astar node -->
+ <node name="rs_path" pkg="rs_path" type="rs_path_node" output="screen"/> 
+ <!-- <node name="tf_broadcaster" pkg="hybrid_astar" type="tf_broadcaster" />
+ <node name="map_server" pkg="map_server" type="map_server" args="$(find hybrid_astar)/maps/map.yaml" /> -->
+ <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rs_path)/launch/rs_path.rviz" />
+ <!-- <node name="rviz" pkg="rviz" type="rviz"  /> -->
+</launch>
